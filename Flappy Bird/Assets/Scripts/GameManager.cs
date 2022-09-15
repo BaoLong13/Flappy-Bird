@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameState gameState;
@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
             case GameState.Death:
                 bird.GetComponent<Bird>().KillBird();
                 bird.GetComponent<Bird>().ResetBird();
+                UIManager.instance.currScore = 0;
                 UIManager.instance.currStage = 0;
                 saveData.currStage = UIManager.instance.currStage;
                 SaveModule.instance.SaveData(saveData);

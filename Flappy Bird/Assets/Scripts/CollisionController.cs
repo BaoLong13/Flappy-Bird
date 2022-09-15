@@ -17,11 +17,11 @@ public class CollisionController : MonoBehaviour
                     collision.gameObject.GetComponent<Bird>().Jump(new Vector2(0, 1));
                     break;
                 case "Left":
-                    collision.gameObject.GetComponent<Bird>().currX = 1;
+                    collision.gameObject.GetComponent<Bird>().currX = 2;
                     collision.gameObject.GetComponent<SpriteRenderer>().flipX = false;
                     break;
                 case "Right":
-                    collision.gameObject.GetComponent<Bird>().currX = -1;
+                    collision.gameObject.GetComponent<Bird>().currX = -2;
                     collision.gameObject.GetComponent<SpriteRenderer>().flipX = true;
                     break;
             }

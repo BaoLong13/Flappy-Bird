@@ -35,6 +35,7 @@ public class Pendulum : MonoBehaviour
         }
 
     }
+
     public void Move()
     {
         ChangeMoveDir();

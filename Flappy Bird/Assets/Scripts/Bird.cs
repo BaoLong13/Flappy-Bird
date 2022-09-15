@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
     private Rigidbody2D birdRigidBody;
     private Transform birdTransform;
+
     private const float JUMPAMOUNT = 4.5f;
 
-
-    public int currX = 1;
+    public int currX = 2;
     
     private void Awake()
     {
@@ -44,7 +42,7 @@ public class Bird : MonoBehaviour
     {
         birdTransform.position = new Vector2(0, 0);
         gameObject.SetActive(true);
-        currX = 1;
+        currX = 2;
         gameObject.GetComponent<SpriteRenderer>().flipX = false;
     }
 
